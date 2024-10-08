@@ -25,7 +25,7 @@ const Reservation = () => {
           <input
             type="hidden"
             name="access_key"
-            value={import.meta.env.VITE_API_KEY} // Use import.meta.env for Vite
+            value="9cbbd7d0-14de-4dcc-84ee-2b862f330233" // Use import.meta.env for Vite
           />
           <input
             type="hidden"
@@ -53,7 +53,7 @@ const Reservation = () => {
                 Last Name
               </label>
               <input
-                id="name"
+                id="second-name"
                 name="second-name"
                 className="form-input"
                 placeholder="last name"
@@ -66,20 +66,20 @@ const Reservation = () => {
                 Date for Reservation
               </label>
               <input
-                id="name"
-                name="name"
+                id="date"
+                name="date"
                 className="form-input"
                 type="date"
                 required
               />
             </div>
             <div className="form-group">
-              <label htmlFor="first-name" className="form-label">
+              <label htmlFor="people" className="form-label">
                 No. of People
               </label>
               <input
-                id="name"
-                name="first-name"
+                id="people"
+                name="number-of-people"
                 className="form-input"
                 placeholder="......"
                 type="number"
