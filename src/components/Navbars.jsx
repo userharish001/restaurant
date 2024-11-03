@@ -1,56 +1,32 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import logo from "/logo.jpg";
-import { Image } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const Navbars = () => {
   return (
-    <div style={{ paddingTop: "70px" }}>
-      <Navbar expand="lg" className="bg-info border-5 fixed-top">
-        <Container fluid>
-          <Image
-            style={{
-              width: 50 + "px",
-              borderRadius: 100 + "%",
-              padding: 5 + "px",
-            }}
-            src={logo}
-          />
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <Nav.Link className="active" href="/">
-                Home
-              </Nav.Link>
-              <Nav.Link href="/categories">Categories</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/recipe">Food Receipe</Nav.Link>
-              <Nav.Link href="/reservation">Reservation</Nav.Link>
-            </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success text-white bg-primary">
-                Search
-              </Button>
-            </Form>
-          </Navbar.Collapse>
-        </Container>
+    <div>
+      <Navbar bg="info" variant="dark" expand="lg" className="px-4 fixed-top rounded-1">
+        <Navbar.Brand href="#home" className="text-black">
+        <button class="button" data-text="Awesome">
+    <span class="actual-text">&nbsp;Universe&nbsp;</span>
+    <span aria-hidden="true" class="hover-text">&nbsp;uiverse&nbsp;</span>
+</button>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto gap-3">
+            <NavLink to="/" className="nav-link text-white">
+              Home
+            </NavLink>
+            <NavLink to="/about" className="nav-link text-white">
+              About
+            </NavLink>
+            <NavLink to="/reservation" className="nav-link text-white">
+              Reservation
+            </NavLink>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
-      <Outlet />
     </div>
   );
 };
