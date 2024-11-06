@@ -22,7 +22,7 @@ const About = () => {
         <Col md={6}>
           <Card className="border-0">
             <Card.Body>
-              <h2 className="text-info">Welcome to FastBite!</h2>
+              <h2 className="text-info">Welcome to Universe</h2>
               <p className="lead">
                 At FastBite, we believe in serving quality fast food that
                 doesn’t compromise on taste. Established in 2023, our restaurant

@@ -263,9 +263,10 @@ const Home = () => {
           </Navbar>
           {filteredItems.map((list) => (
             <Col xs={12} sm={6} md={4} lg={3} className="mb-4" key={list.id}>
-              <Card style={{ width: "100%" }} className="cards">
+             <div className="card">
+             <Card style={{ width: "100%" }} className="card2">
                 <div
-                  style={{ width: "100%", height: "200px", overflow: "hidden" }}
+                  style={{ width: "100%", height: "200px", overflow: "hidden",border:"1px solid black",    boxShadow:"2px 3px 4px grey" }}
                 >
                   <Card.Img
                     variant="top"
@@ -277,11 +278,12 @@ const Home = () => {
                     }}
                   />
                 </div>
-                <Card.Body>
+                <Card.Body style={{border:"1px solid black"}}>
                   <Card.Title>{list.title}</Card.Title>
                   <Card.Text>{list.description}</Card.Text>
                 </Card.Body>
               </Card>
+             </div>
             </Col>
           ))}
         </Row>
